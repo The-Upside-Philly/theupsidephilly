@@ -75,7 +75,17 @@ nav a:hover{color:var(--rose)}
 .street .ros{fill:var(--rose-fill)}.street .sag{fill:var(--sage)}
 .street .sw{animation:sway 6s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
 @keyframes sway{50%{transform:rotate(1.6deg)}}
-.street{position:relative}
+.street{position:relative;overflow:hidden}
+.rabbit{position:absolute;left:0;bottom:20px;display:flex;align-items:flex-end;gap:6px;text-decoration:none;animation:hop 14s linear infinite;z-index:2}
+.rabbit svg{width:48px;height:41px;animation:bounce .5s ease-in-out infinite}
+.rabbit .rb{fill:#fff;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}.rabbit .rt{fill:#fff;stroke:var(--ink);stroke-width:1.2}
+.rabbit span{font:600 .66rem ui-monospace,Menlo,monospace;color:var(--rose);opacity:0;transition:opacity .2s;white-space:nowrap;margin-bottom:6px}
+.rabbit:hover{animation-play-state:paused}.rabbit:hover svg{animation-play-state:paused}.rabbit:hover span,.rabbit:focus-visible span{opacity:1}
+@keyframes hop{0%{left:-6%;opacity:0}6%{opacity:1}88%{opacity:1}100%{left:96%;opacity:0}}
+@keyframes bounce{50%{transform:translateY(-7px)}}
+.street.code .rabbit .rb,.street.code .rabbit .rt{fill:#141212;stroke:#fff;filter:drop-shadow(0 0 4px #fff)}
+.street.code .rabbit span{opacity:1;color:#fff}
+@media (prefers-reduced-motion:reduce){.rabbit,.rabbit svg{animation:none}.rabbit{left:12px}}
 .codebtn{position:absolute;right:0;top:0;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ground);color:var(--ink);font:700 .72rem/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 .codebtn .dot{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 6px var(--sage)}
 .codebtn:hover{border-color:var(--rose);color:var(--rose)}
@@ -409,7 +419,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
       <ul>
         <li><a href="#services">How I help</a></li>
         <li><a href="about.html">About &amp; work</a></li>
-        <li><a class="navcta" href="#hello">Decode my business</a></li>
+        <li><a class="navcta" href="#hello">Decode your business</a></li>
       </ul>
     </nav>
   </div>
@@ -422,7 +432,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
       <h1>Helping Philly's shops, trades and makers get found and get chosen <span class="script">one block at a time</span></h1>
       <p class="lede">Every shop on the block has a second layer: its Google listing, reviews, website and DMs. I read that code, fix it and make it work for Philly's small businesses.</p>
       <div class="btns">
-        <a class="btn solid" href="#hello">Decode my business</a>
+        <a class="btn solid" href="#hello">Decode your business</a>
         <a class="btn" href="about.html">See my work</a>
       </div>
     </div>
@@ -517,6 +527,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
   <g class="bob b4"><rect class="bub" x="424" y="44" width="60" height="20" rx="7"/><path class="bub" d="M444 64l-3 7 9-7"/><text class="stars" x="454" y="58">★★★★★</text></g>
 </svg>
       <div class="curb"></div>
+      <a class="rabbit" href="#hello" title="Follow the white rabbit" aria-label="Follow the white rabbit to request a decode"><svg viewBox="0 0 40 34" aria-hidden="true"><path class="rb" d="M8 24c0-6 6-10 14-10 6 0 11 3 11 9 0 4-3 7-8 7H13c-3 0-5-3-5-6z"/><circle class="rb" cx="31" cy="15" r="6"/><path class="rb" d="M28 10c-1-5 0-9 2-9s2 5 1 9M32 10c1-5 3-8 5-7s0 5-2 8"/><circle class="rt" cx="8" cy="22" r="3"/><circle cx="33" cy="14" r="1.1" fill="#E58B84"/></svg><span>follow the white rabbit</span></a>
       <button class="codebtn" type="button" aria-pressed="false" id="codeBtn"><span class="dot"></span><span class="lbl">Show the code</span></button>
     </div>
   </div>
@@ -599,7 +610,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
   <section id="hello" class="lastsec" style="padding-top:0">
     <div class="signup">
       <div style="display:grid;gap:14px">
-        <span class="eyebrow">Decode my business</span>
+        <span class="eyebrow">Decode your business</span>
         <h2>Tell me about your business <span class="script">and I'll take a look</span></h2>
         <p>Share a few details and I'll follow up by email to set up your decode.</p>
         <p style="font-size:.95rem">Or write to <a href="mailto:hello@theupsidephilly.com" style="color:var(--rose-soft)">hello@theupsidephilly.com</a></p>
@@ -620,7 +631,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
         <div aria-hidden="true" style="position:absolute;left:-9999px"><label for="website">Leave blank</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
         <span style="font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase">I'm interested in</span>
         <div class="checks">
-          <label class="chip"><input type="checkbox" value="Decode my business" checked><span>Decode my business</span></label>
+          <label class="chip"><input type="checkbox" value="A decode" checked><span>A decode</span></label>
           <label class="chip"><input type="checkbox" value="Website"><span>Website</span></label>
           <label class="chip"><input type="checkbox" value="Brand"><span>Brand</span></label>
           <label class="chip"><input type="checkbox" value="Google and listings"><span>Google &amp; listings</span></label>
