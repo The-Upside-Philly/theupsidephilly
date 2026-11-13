@@ -194,7 +194,7 @@ section{padding-block:clamp(64px,9vw,112px)}
 form{display:grid;gap:12px}
 label{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .row{display:flex;gap:10px;flex-wrap:wrap}
-input[type=email],input[type=text]{flex:1 1 200px;min-width:0;padding:14px 18px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ground) 40%,var(--ink));background:transparent;color:var(--ground);font:inherit}
+input[type=email],input[type=text],input[type=tel]{flex:1 1 200px;min-width:0;padding:14px 18px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ground) 40%,var(--ink));background:transparent;color:var(--ground);font:inherit}
 input::placeholder{color:color-mix(in srgb,var(--ground) 55%,var(--ink))}
 .signup .btn{border-color:var(--ground);color:var(--ink);background:var(--ground)}
 .signup .btn:hover{background:var(--rose-soft);border-color:var(--rose-soft);color:var(--ink)}
@@ -587,13 +587,18 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
       </div>
       <form id="inquiry" novalidate>
         <div class="two">
-          <div class="field"><label for="name">Name</label><input id="name" type="text" autocomplete="name" placeholder="Your name"></div>
-          <div class="field"><label for="biz">Business</label><input id="biz" type="text" autocomplete="organization" placeholder="Business name"></div>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name"></div>
+          <div class="field"><label for="biz">Business</label><input id="biz" name="business" type="text" autocomplete="organization" placeholder="Business name"></div>
         </div>
         <div class="two">
-          <div class="field"><label for="hood">Neighborhood</label><input id="hood" type="text" placeholder="e.g. East Passyunk"></div>
-          <div class="field"><label for="ig">Instagram or website</label><input id="ig" type="text" placeholder="@handle or site"></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+          <div class="field"><label for="phone">Phone <span style="opacity:.6;text-transform:none;letter-spacing:0">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="215-555-0123"></div>
         </div>
+        <div class="two">
+          <div class="field"><label for="hood">Neighborhood</label><input id="hood" name="neighborhood" type="text" placeholder="e.g. East Passyunk"></div>
+          <div class="field"><label for="ig">Instagram or website</label><input id="ig" name="instagram_or_site" type="text" placeholder="@handle or site"></div>
+        </div>
+        <div aria-hidden="true" style="position:absolute;left:-9999px"><label for="website">Leave blank</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
         <span style="font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase">I'm interested in</span>
         <div class="checks">
           <label class="chip"><input type="checkbox" value="Decode my business" checked><span>Decode my business</span></label>
@@ -602,7 +607,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
           <label class="chip"><input type="checkbox" value="Google and listings"><span>Google &amp; listings</span></label>
           <label class="chip"><input type="checkbox" value="Social and outreach"><span>Social &amp; outreach</span></label>
         </div>
-        <div class="field"><label for="notes">Anything else?</label><textarea id="notes" rows="3" placeholder="What you do and what you want more of…"></textarea></div>
+        <div class="field"><label for="notes">Anything else?</label><textarea id="notes" name="notes" rows="3" placeholder="What you do and what you want more of…"></textarea></div>
         <div><button class="btn" type="submit">Send</button></div>
         <p class="msg" id="msg" role="status"></p>
       </form>
@@ -623,15 +628,26 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 </div>
 
 <script>
+/* © 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C */
 (function(){
-  var f=document.getElementById("inquiry"), msg=document.getElementById("msg");
+  var FORM_URL="https://script.google.com/macros/s/AKfycbyLjV4_NfGhBH0wctAK2tJ3zGiMqETSD9iz7oHc29RNN6Gg9mUYJz2Ou1g_1qtjMldp/exec"; // Google Apps Script web app (theupsidephilly@gmail.com)
+  var f=document.getElementById("inquiry"), msg=document.getElementById("msg"), btn=f.querySelector("button[type=submit]");
+  function v(id){var el=document.getElementById(id);return el?el.value.trim():"";}
   f.addEventListener("submit",function(e){
     e.preventDefault();
-    var v=function(id){return document.getElementById(id).value.trim();};
+    var em=v("email");
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){msg.textContent="Enter an email address like name@example.com.";document.getElementById("email").focus();return;}
     var picks=Array.prototype.map.call(f.querySelectorAll(".checks input:checked"),function(c){return c.value;});
-    var body="Name: "+v("name")+"\nBusiness: "+v("biz")+"\nNeighborhood: "+v("hood")+"\nInstagram/website: "+v("ig")+"\nInterested in: "+picks.join(", ")+"\n\n"+v("notes");
-    location.href="mailto:hello@theupsidephilly.com?subject="+encodeURIComponent("Decode request: "+(v("biz")||v("name")||"a Philly business"))+"&body="+encodeURIComponent(body);
-    msg.textContent="Your email app should open with your message ready to send.";
+    var d={name:v("name"),email:em,phone:v("phone"),business:v("biz"),neighborhood:v("hood"),instagram_or_site:v("ig"),interests:picks.join(", "),notes:v("notes"),website:v("website"),page:location.pathname};
+    function mail(){var body="Name: "+d.name+"\nEmail: "+d.email+"\nPhone: "+d.phone+"\nBusiness: "+d.business+"\nNeighborhood: "+d.neighborhood+"\nInstagram/website: "+d.instagram_or_site+"\nInterested in: "+d.interests+"\n\n"+d.notes;
+      location.href="mailto:hello@theupsidephilly.com?subject="+encodeURIComponent("Decode request: "+(d.business||d.name||"a Philly business"))+"&body="+encodeURIComponent(body);
+      msg.textContent="Your email app should open with your request ready to send.";}
+    if(!FORM_URL){mail();return;}
+    btn.disabled=true;msg.textContent="Sending…";
+    fetch(FORM_URL,{method:"POST",mode:"no-cors",body:new URLSearchParams(d)})
+      .then(function(){f.reset();msg.textContent="Got it. I'll be in touch soon.";})
+      .catch(function(){mail();})
+      .finally(function(){btn.disabled=false;});
   });
 })();
 </script>
