@@ -76,16 +76,6 @@ nav a:hover{color:var(--rose)}
 .street .sw{animation:sway 6s ease-in-out infinite;transform-origin:50% 100%;transform-box:fill-box}
 @keyframes sway{50%{transform:rotate(1.6deg)}}
 .street{position:relative;overflow:hidden}
-.rabbit{position:absolute;left:0;bottom:20px;display:flex;align-items:flex-end;gap:6px;text-decoration:none;animation:hop 14s linear infinite;z-index:2}
-.rabbit svg{width:78px;height:50px;animation:bounce .5s ease-in-out infinite}
-.rabbit .rb{fill:#fff;stroke:var(--ink);stroke-width:1.4;stroke-linejoin:round}.rabbit .rt{fill:#fff;stroke:var(--ink);stroke-width:1.2}
-.rabbit span{font:600 .66rem ui-monospace,Menlo,monospace;color:var(--rose);opacity:0;transition:opacity .2s;white-space:nowrap;margin-bottom:6px}
-.rabbit:hover{animation-play-state:paused}.rabbit:hover svg{animation-play-state:paused}.rabbit:hover span,.rabbit:focus-visible span{opacity:1}
-@keyframes hop{0%{left:-6%;opacity:0}6%{opacity:1}88%{opacity:1}100%{left:96%;opacity:0}}
-@keyframes bounce{50%{transform:translateY(-7px)}}
-.street.code .rabbit svg{filter:drop-shadow(0 0 6px #fff)}
-.street.code .rabbit span{opacity:1;color:#fff}
-@media (prefers-reduced-motion:reduce){.rabbit,.rabbit svg{animation:none}.rabbit{left:12px}}
 .codebtn{position:absolute;right:0;top:0;display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ground);color:var(--ink);font:700 .72rem/1 ui-monospace,Menlo,monospace;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 .codebtn .dot{width:8px;height:8px;border-radius:50%;background:var(--sage);box-shadow:0 0 6px var(--sage)}
 .codebtn:hover{border-color:var(--rose);color:var(--rose)}
@@ -527,35 +517,6 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
   <g class="bob b4"><rect class="bub" x="424" y="44" width="60" height="20" rx="7"/><path class="bub" d="M444 64l-3 7 9-7"/><text class="stars" x="454" y="58">★★★★★</text></g>
 </svg>
       <div class="curb"></div>
-      <a class="rabbit" href="#hello" title="Follow the white rabbit" aria-label="Follow the white rabbit to request a decode"><svg viewBox="0 0 140 90" aria-hidden="true">
-<desc>Original white rabbit mark · © 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc>
-<g stroke="#141212" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round">
-<!-- back ear -->
-<path d="M96 30 C100 16 112 6 124 6 C126 10 118 22 104 34 Z" fill="#fff"/>
-<!-- body + head -->
-<path d="M18 56 C14 42 30 30 52 30 C66 30 76 34 86 34 C92 26 104 24 112 30 C120 36 122 46 116 52 C112 56 106 56 100 55 C96 62 88 66 80 66 L66 66 C60 72 50 74 40 72 C28 70 20 64 18 56 Z" fill="#fff"/>
-<!-- front ear -->
-<path d="M100 28 C98 14 104 2 114 0 C118 4 114 18 106 30 Z" fill="#fff"/>
-<!-- hind leg kicked back -->
-<path d="M30 62 C18 66 8 70 2 70 C4 76 18 78 34 72" fill="#fff"/>
-<!-- front legs reaching -->
-<path d="M96 56 C104 62 112 70 120 72 C122 76 112 78 100 70" fill="#fff"/>
-<path d="M84 64 C90 72 96 80 102 82 C102 86 92 86 84 76" fill="#fff"/>
-<!-- tail -->
-<circle cx="16" cy="48" r="7" fill="#fff"/>
-</g>
-<!-- eye, nose, inner ear, flash shading -->
-<circle cx="108" cy="40" r="2.6" fill="#E58B84"/>
-<circle cx="119" cy="46" r="1.6" fill="#141212"/>
-<path d="M104 26 C106 16 110 8 114 5" stroke="#E58B84" stroke-width="2" fill="none" stroke-linecap="round"/>
-<g stroke="#141212" stroke-width="1.6" stroke-linecap="round" fill="none">
-<path d="M44 40 l-4 4 M52 38 l-4 4 M60 38 l-4 4"/>
-<path d="M38 64 c6 2 14 2 20 0"/>
-</g>
-<!-- speed lines -->
-<g stroke="#9FC48A" stroke-width="2.4" stroke-linecap="round"><path d="M2 40h8M0 50h6M4 30h7"/></g>
-</svg>
-<span>follow the white rabbit</span></a>
       <button class="codebtn" type="button" aria-pressed="false" id="codeBtn"><span class="dot"></span><span class="lbl">Show the code</span></button>
     </div>
   </div>
