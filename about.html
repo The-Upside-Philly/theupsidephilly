@@ -6,7 +6,28 @@
 <meta name="owner" content="Shirah M. Brown">
 <meta name="ref" content="UPS-SMB-26-7F3A9C">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+/* contrast header + mobile hero image first */
+header.top{background:#141212;border-bottom:0}
+header.top .logo .light{display:none!important}header.top .logo .dark{display:block!important}
+header.top nav a{color:#F3E9E6}header.top nav a:hover{color:#FF6FA3}
+header.top .navcta{border-color:#FF6FA3;background:#FF6FA3;color:#141212!important}
+header.top .navcta:hover{background:#F3E9E6;border-color:#F3E9E6;color:#141212!important}
+@media (max-width:900px){.hero .street-wrap{order:-1;margin-top:8px}}
+
+header.top{background:#141212!important;border-bottom:0!important}
+.mtgl{display:none;background:none;border:0;padding:8px;cursor:pointer;color:#F3E9E6}
+.mtgl svg{width:28px;height:28px;display:block}
+@media (max-width:900px){
+ .top .wrap{flex-wrap:nowrap;position:relative}
+ .mtgl{display:block}
+ header.top nav ul{display:none;position:absolute;right:0;top:calc(100% + 1px);flex-direction:column;gap:0;background:#141212;padding:6px 20px 18px;border-radius:0 0 14px 14px;min-width:240px;box-shadow:0 12px 24px rgba(0,0,0,.25)}
+ header.top nav.open ul{display:flex}
+ header.top nav li{padding:12px 0;border-top:1px solid #2E2629}
+ header.top nav li:first-child{border-top:0}
+ header.top nav .navcta{display:inline-block;margin-top:4px}
+}
+</style>
 <title>About &amp; work · Shirah M. Brown · The Upside Philly</title>
 <meta name="description" content="Shirah M. Brown, Philly digital maven: 15 years building websites, brands and customer systems, now for Philly small businesses. Portfolio and background. Every Philly shop has a code layer: its Google listing, reviews, website and DMs. The Upside Philly decodes it for small businesses with health reports, websites, listings and outreach.">
 <meta name="author" content="Shirah M. Brown">
@@ -403,7 +424,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
       <svg class="light" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#2F2C2C"><tspan fill="#B8406E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#2F2C2C"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#B8406E" font-weight="700">PHILLY</text></svg>
       <svg class="dark" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#F3E9E6"><tspan fill="#FF6FA3" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#F3E9E6"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#FF6FA3" font-weight="700">PHILLY</text></svg>
     </a>
-    <nav aria-label="Main">
+    <nav aria-label="Main"><button class="mtgl" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
       <ul>
         <li><a href="index.html#services">How I help</a></li>
         <li><a href="about.html">About &amp; work</a></li>
@@ -474,5 +495,5 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
     <span class="fpx" aria-hidden="true">Designed, written and built by Shirah M. Brown for The Upside Philly. Copying is not permitted. Ref UPS-SMB-26-7F3A9C.</span>
   </footer>
 </div>
-</body>
+<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script></body>
 </html>
