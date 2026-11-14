@@ -68,6 +68,10 @@ header.top .hcta{white-space:nowrap}
 #layers .head{max-width:none}#layers .head .lede{max-width:none;text-wrap:wrap}
 /*HEROFIT*/@media (min-width:901px){.hero{grid-template-columns:1fr 1.3fr}.hero h1{font-size:clamp(1.6rem,2.7vw,2.7rem)}.hero .lede{font-size:1rem;margin-top:0}.hero .copy{gap:12px}}
 @media (min-width:901px) and (max-width:1200px){.hero h1{font-size:1.75rem}.hero .lede{font-size:.88rem;line-height:1.5}.hero .script{margin-top:0}}@media (min-width:1500px){.hero h1{font-size:2.45rem}}
+
+.hero .copy{container-type:inline-size}
+.hero h1 .script.sj{display:flex!important;justify-content:space-between;width:100%}
+@media (min-width:901px){.hero h1 .hl{display:block;white-space:nowrap}.hero h1{font-size:6.4cqi!important}}@media (min-width:1201px){.hero .lede{font-size:1.05rem!important;line-height:1.6}}@media (min-width:1500px){.hero .lede{font-size:1.18rem!important;line-height:1.65}.hero .copy{gap:18px}}
 </style>
 <title>The Upside Philly</title>
 <meta name="description" content="Every Philly shop has a code layer: its Google listing, reviews, website and DMs. The Upside Philly decodes it for small businesses with health reports, websites, listings and outreach.">
@@ -518,7 +522,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 <main class="wrap" id="top">
   <div class="hero">
     <div class="copy">
-      <h1>Helping Philly's shops, trades and makers get found and get chosen <span class="script">one block at a time</span></h1>
+      <h1><span class="hl">Helping Philly's shops, trades &amp;</span> <span class="hl">makers get found and get chosen</span> <span class="script sj"><span>one</span><span>block</span><span>at</span><span>a</span><span>time</span></span></h1>
       <p class="lede">Every business has a second layer: its Google listing, reviews, website and DMs. Whether you run a storefront or a crew with nothing online but a few Yelp reviews, I read that code, fix it and make it work for you.</p>
       <a class="scue" href="#layers" aria-label="Scroll to explore"><span class="k">&gt;</span> scroll_down<span class="blk"></span></a>
     </div>
