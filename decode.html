@@ -52,6 +52,12 @@ header.top nav li{padding:12px 0;border-top:1px solid #2E2629}
 header.top nav li:first-child{border-top:0}
 @media (max-width:900px){header.top nav ul{top:calc(100% + 12px)}}
 @media (max-width:480px){header.top .hcta{padding:7px 12px;font-size:.72rem}header.top .hcta .full{display:none}header.top .hcta .short{display:inline}header.top nav{gap:8px}}
+
+.htag{margin-right:auto;margin-left:22px;padding-left:20px;border-left:1px solid #3A3033;color:#FF6FA3;font:700 .72rem ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+@media (max-width:1000px){.htag{font-size:.64rem;margin-left:14px;padding-left:14px;letter-spacing:.1em}}
+header.top .hcta{white-space:nowrap}
+@media (max-width:900px){header.top .wrap{flex-wrap:wrap!important;row-gap:4px}.htag{order:3;width:100%;margin:0;padding:6px 0 2px;border:0;border-top:1px solid #2E2629;text-align:center;font-size:.66rem}}
+@media (min-width:901px){header.top .wrap{flex-wrap:nowrap!important}.htag{overflow:hidden;text-overflow:clip;min-width:0}}
 </style>
 <title>Decode your business · The Upside Philly</title>
 <meta name="description" content="Every Philly shop has a code layer: its Google listing, reviews, website and DMs. The Upside Philly decodes it for small businesses with health reports, websites, listings and outreach.">
@@ -484,12 +490,12 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 </head>
 <body>
 <header class="top">
-  <div class="tagline"><div class="wrap">// Decoding the street and the screen</div></div>
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="The Upside Philly, home">
       <svg class="light" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#2F2C2C"><tspan fill="#B8406E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#2F2C2C"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#B8406E" font-weight="700">PHILLY</text></svg>
       <svg class="dark" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#F3E9E6"><tspan fill="#FF6FA3" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#F3E9E6"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#FF6FA3" font-weight="700">PHILLY</text></svg>
     </a>
+    <span class="htag">// Decoding the street and the screen</span>
     <nav aria-label="Main"><a class="navcta hcta" href="decode.html"><span class="full">Decode your business</span><span class="short">Decode</span></a><button class="mtgl" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
       <ul>
         <li><a href="index.html#services">How I help</a></li>
