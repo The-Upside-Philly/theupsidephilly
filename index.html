@@ -70,8 +70,9 @@ header.top .hcta{white-space:nowrap}
 @media (min-width:901px) and (max-width:1200px){.hero h1{font-size:1.75rem}.hero .lede{font-size:.88rem;line-height:1.5}.hero .script{margin-top:0}}@media (min-width:1500px){.hero h1{font-size:2.45rem}}
 
 .hero .copy{container-type:inline-size}
-.hero h1 .script.sj{display:flex!important;justify-content:space-between;width:100%}
+.hero h1 .script.sj{display:block!important;white-space:nowrap;line-height:1}.hero h1 .sji{display:inline-block}
 @media (min-width:901px){.hero h1 .hl{display:block;white-space:nowrap}.hero h1{font-size:6.4cqi!important}}@media (min-width:1201px){.hero .lede{font-size:1.05rem!important;line-height:1.6}}@media (min-width:1500px){.hero .lede{font-size:1.18rem!important;line-height:1.65}.hero .copy{gap:18px}}
+@media (min-width:901px){.hero .lede{font-size:.95rem!important;line-height:1.5!important}.hero .copy{gap:10px!important}.hero h1 .script.sj{margin-top:.05em}}
 </style>
 <title>The Upside Philly</title>
 <meta name="description" content="Every Philly shop has a code layer: its Google listing, reviews, website and DMs. The Upside Philly decodes it for small businesses with health reports, websites, listings and outreach.">
@@ -522,7 +523,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 <main class="wrap" id="top">
   <div class="hero">
     <div class="copy">
-      <h1><span class="hl">Helping Philly's shops, trades &amp;</span> <span class="hl">makers get found and get chosen</span> <span class="script sj"><span>one</span><span>block</span><span>at</span><span>a</span><span>time</span></span></h1>
+      <h1><span class="hl">Helping Philly's shops, trades &amp;</span> <span class="hl">makers get found and get chosen</span> <span class="script sj"><span class="sji">one block at a time</span></span></h1>
       <p class="lede">Every business has a second layer: its Google listing, reviews, website and DMs. Whether you run a storefront or a crew with nothing online but a few Yelp reviews, I read that code, fix it and make it work for you.</p>
       <a class="scue" href="#layers" aria-label="Scroll to explore"><span class="k">&gt;</span> scroll_down<span class="blk"></span></a>
     </div>
@@ -654,5 +655,5 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 b.addEventListener("click",function(){var on=!st.classList.contains("code");st.classList.toggle("code",on);b.setAttribute("aria-pressed",on);b.querySelector(".lbl").textContent=on?"Back to the street":"Show the code";});})();
 </script>
 <script>(function(){var h=document.querySelector(".hero2"),b=h&&h.querySelector(".tgl");if(!b)return;b.addEventListener("click",function(){var on=!h.classList.contains("code");h.classList.toggle("code",on);b.setAttribute("aria-pressed",on);b.textContent=on?"▸ Back to the street":"▸ Decode the block";});})();</script>
-<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script><script>(function(){var sel="h1,h2,h3,h4,p,li,summary,figcaption,.lede";document.querySelectorAll(sel).forEach(function(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,last=null;while(n=w.nextNode()){if(n.nodeValue.trim())last=n}if(!last)return;var t=last.nodeValue,i=t.trimEnd().lastIndexOf(" ");if(i>0&&el.textContent.trim().split(/\s+/).length>3)last.nodeValue=t.slice(0,i)+"\u00a0"+t.slice(i+1)})})();</script></body>
+<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script><script>(function(){var sel="h1,h2,h3,h4,p,li,summary,figcaption,.lede";document.querySelectorAll(sel).forEach(function(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,last=null;while(n=w.nextNode()){if(n.nodeValue.trim())last=n}if(!last)return;var t=last.nodeValue,i=t.trimEnd().lastIndexOf(" ");if(i>0&&el.textContent.trim().split(/\s+/).length>3)last.nodeValue=t.slice(0,i)+"\u00a0"+t.slice(i+1)})})();</script><script>(function(){function fit(){var h=document.querySelector('.hero h1'),s=h&&h.querySelector('.sj'),i=s&&s.querySelector('.sji');if(!i)return;var tw=0;h.querySelectorAll('.hl').forEach(function(l){var r=document.createRange();r.selectNodeContents(l);tw=Math.max(tw,r.getBoundingClientRect().width)});if(getComputedStyle(h.querySelector('.hl')).display!=='block')tw=h.clientWidth;s.style.fontSize='';var base=parseFloat(getComputedStyle(s).fontSize),w=i.getBoundingClientRect().width;if(w>0&&tw>0)s.style.fontSize=(base*tw/w)+'px'}if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);window.addEventListener('load',fit);window.addEventListener('resize',fit);fit()})();</script></body>
 </html>
