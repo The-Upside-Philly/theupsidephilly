@@ -27,7 +27,21 @@ header.top{background:#141212!important;border-bottom:0!important}
  header.top nav li:first-child{border-top:0}
  header.top nav .navcta{display:inline-block;margin-top:4px}
 }
-</style>
+
+.tagline{background:#1E1A1B;color:#FF6FA3;font:700 .7rem ui-monospace,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;margin-inline:calc(-1*clamp(16px,4vw,48px));padding-inline:clamp(16px,4vw,48px)}
+.tagline .wrap{padding-block:7px;text-align:center}
+#services h2 .nw{white-space:nowrap}
+.wk-grid{margin-bottom:0}
+section.tight-b{padding-bottom:clamp(24px,3vw,36px)!important}
+@media (max-width:900px){footer{padding-block:20px 28px;gap:14px}}
+
+h1,h2,h3,.lede{text-wrap:balance}
+p,li,figcaption,summary,.sum,.cl{text-wrap:pretty}
+
+.tagline .wrap{white-space:nowrap;overflow:hidden}
+footer .nwr{white-space:nowrap}
+.cmd{white-space:nowrap;overflow:hidden;font-size:clamp(.68rem,3.1vw,1rem)}
+.mx-btn{background:#FF6FA3!important;border-color:#FF6FA3!important;color:#141212!important}.mx-btn:hover{background:#9FC48A!important;border-color:#9FC48A!important}.ctabar{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:#141212;border-radius:16px;padding:18px 22px}.ctabar p{font:500 1rem ui-monospace,Menlo,monospace;color:#F3E9E6;margin:0}.ctabar .k{color:#9FC48A}</style>
 <title>The Upside Philly</title>
 <meta name="description" content="Every Philly shop has a code layer: its Google listing, reviews, website and DMs. The Upside Philly decodes it for small businesses with health reports, websites, listings and outreach.">
 <meta name="author" content="Shirah M. Brown">
@@ -459,6 +473,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 </head>
 <body>
 <header class="top">
+  <div class="tagline"><div class="wrap">// Decoding the street and the screen</div></div>
   <div class="wrap">
     <a class="logo" href="#top" aria-label="The Upside Philly, home">
       <svg class="light" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#2F2C2C"><tspan fill="#B8406E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#2F2C2C"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#B8406E" font-weight="700">PHILLY</text></svg>
@@ -468,7 +483,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
       <ul>
         <li><a href="#services">How I help</a></li>
         <li><a href="about.html">About &amp; work</a></li>
-        <li><a class="navcta" href="#hello">Decode your business</a></li>
+        <li><a class="navcta" href="decode.html">Decode your business</a></li>
       </ul>
     </nav>
   </div>
@@ -477,11 +492,10 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 <main class="wrap" id="top">
   <div class="hero">
     <div class="copy">
-      <span class="eyebrow">Small business · Philadelphia</span>
       <h1>Helping Philly's shops, trades and makers get found and get chosen <span class="script">one block at a time</span></h1>
-      <p class="lede">Every shop on the block has a second layer: its Google listing, reviews, website and DMs. I read that code, fix it and make it work for Philly's small businesses.</p>
+      <p class="lede">Every business has a second layer: its Google listing, reviews, website and DMs. Whether you run a storefront or a crew with nothing online but a few Yelp reviews, I read that code, fix it and make it work for you.</p>
       <div class="btns">
-        <a class="btn solid" href="#hello">Decode your business</a>
+        <a class="btn solid" href="decode.html">Decode your business</a>
         <a class="btn" href="about.html">See my work</a>
       </div>
     </div>
@@ -494,13 +508,13 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
     <div class="head">
       <span class="eyebrow">The idea</span>
       <h2>Every business lives on two layers</h2>
-      <p class="lede">Customers walk past one and search the other. Most owners only tend the street. I work both.</p>
+      <p class="lede">Customers see one and search the other. Owners focus on the day to day. I handle the behind the scenes.</p>
     </div>
     <div class="two-layers">
       <div class="layer street-l">
         <span class="lt">01 · The street</span>
-        <h3>What people walk past</h3>
-        <ul><li>Storefront and signage</li><li>Window and seasonal displays</li><li>Curb appeal</li><li>The experience at the door</li></ul>
+        <h3>What people see in person</h3>
+        <ul><li>Storefront, truck or job site</li><li>Signage, uniforms and yard signs</li><li>Window and seasonal displays</li><li>The experience at the door</li></ul>
       </div>
       <div class="layer code-l">
         <span class="lt">02 · The code</span>
@@ -515,7 +529,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
   <section id="services">
     <div class="head">
       <span class="eyebrow">How I help</span>
-      <h2>Decode it. Build it. Grow it.</h2>
+      <h2><span class="nw">Decode it.</span> <span class="nw">Build it.</span> <span class="nw">Grow it.</span></h2>
     </div>
     <div class="svc">
       <div class="col c-decode">
@@ -563,47 +577,17 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
     </div>
   </section>
 
-  <section id="hello" class="lastsec" style="padding-top:0">
-    <div class="signup">
-      <div style="display:grid;gap:14px">
-        <span class="eyebrow">Decode your business</span>
-        <h2>Tell me about your business <span class="script">and I'll take a look</span></h2>
-        <p>Share a few details and I'll follow up by email to set up your decode.</p>
-        <p style="font-size:.95rem">Or write to <a href="mailto:hello@theupsidephilly.com" style="color:var(--rose-soft)">hello@theupsidephilly.com</a></p>
-      </div>
-      <form id="inquiry" novalidate>
-        <div class="two">
-          <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Your name"></div>
-          <div class="field"><label for="biz">Business</label><input id="biz" name="business" type="text" autocomplete="organization" placeholder="Business name"></div>
-        </div>
-        <div class="two">
-          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-          <div class="field"><label for="phone">Phone <span style="opacity:.6;text-transform:none;letter-spacing:0">(optional)</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="215-555-0123"></div>
-        </div>
-        <div class="two">
-          <div class="field"><label for="hood">Neighborhood</label><input id="hood" name="neighborhood" type="text" placeholder="e.g. East Passyunk"></div>
-          <div class="field"><label for="ig">Instagram or website</label><input id="ig" name="instagram_or_site" type="text" placeholder="@handle or site"></div>
-        </div>
-        <div aria-hidden="true" style="position:absolute;left:-9999px"><label for="website">Leave blank</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-        <span style="font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase">I'm interested in</span>
-        <div class="checks">
-          <label class="chip"><input type="checkbox" value="A decode" checked><span>A decode</span></label>
-          <label class="chip"><input type="checkbox" value="Website"><span>Website</span></label>
-          <label class="chip"><input type="checkbox" value="Brand"><span>Brand</span></label>
-          <label class="chip"><input type="checkbox" value="Google and listings"><span>Google &amp; listings</span></label>
-          <label class="chip"><input type="checkbox" value="Social and outreach"><span>Social &amp; outreach</span></label>
-        </div>
-        <div class="field"><label for="notes">Anything else?</label><textarea id="notes" name="notes" rows="3" placeholder="What you do and what you want more of…"></textarea></div>
-        <div><button class="btn" type="submit">Send</button></div>
-        <p class="msg" id="msg" role="status"></p>
-      </form>
+  <section class="lastsec" style="padding-top:0">
+    <div class="ctabar">
+      <p><span class="k">&gt;</span> See what's running behind your business.</p>
+      <a class="btn solid mx-btn" href="decode.html">Decode your business</a>
     </div>
   </section>
 
   <footer>
     <div class="left">
       <div class="icons"><a href="https://instagram.com/the_upside_philly" target="_blank" rel="noopener" aria-label="Instagram: @the_upside_philly"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="f"/></svg></a><a href="mailto:hello@theupsidephilly.com" aria-label="Email: hello@theupsidephilly.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></svg></a></div>
-      <span>© 2026 Shirah M. Brown · Philadelphia, PA · All rights reserved</span>
+      <span><span class="nwr">© 2026 Shirah M. Brown</span> · <span class="nwr">Philadelphia, PA</span> · <span class="nwr">All rights reserved</span></span>
     </div>
     <a class="logo" href="index.html" aria-label="The Upside Philly home">
       <svg class="light" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#2F2C2C"><tspan fill="#B8406E" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#2F2C2C"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#B8406E" font-weight="700">PHILLY</text></svg>
@@ -643,5 +627,5 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 b.addEventListener("click",function(){var on=!st.classList.contains("code");st.classList.toggle("code",on);b.setAttribute("aria-pressed",on);b.querySelector(".lbl").textContent=on?"Back to the street":"Show the code";});})();
 </script>
 <script>(function(){var h=document.querySelector(".hero2"),b=h&&h.querySelector(".tgl");if(!b)return;b.addEventListener("click",function(){var on=!h.classList.contains("code");h.classList.toggle("code",on);b.setAttribute("aria-pressed",on);b.textContent=on?"▸ Back to the street":"▸ Decode the block";});})();</script>
-<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script></body>
+<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script><script>(function(){var sel="h1,h2,h3,h4,p,li,summary,figcaption,.lede";document.querySelectorAll(sel).forEach(function(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,last=null;while(n=w.nextNode()){if(n.nodeValue.trim())last=n}if(!last)return;var t=last.nodeValue,i=t.trimEnd().lastIndexOf(" ");if(i>0&&el.textContent.trim().split(/\s+/).length>3)last.nodeValue=t.slice(0,i)+"\u00a0"+t.slice(i+1)})})();</script></body>
 </html>
