@@ -408,7 +408,7 @@ select option{color:#2F2C2C}
 .svc .num{font:700 .74rem/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase}
 .svc .col h3.big{font-size:2rem;margin:6px 0 2px}
 .svc .col .sum{font-size:.98rem;margin-bottom:10px}
-.svc details{border-top:1px solid rgba(0,0,0,.12)}
+.svc{align-items:start}.svc details{border-top:1px solid rgba(0,0,0,.12)}
 .svc summary{list-style:none;cursor:pointer;padding:12px 0;display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:.98rem}
 .svc summary::-webkit-details-marker{display:none}
 .svc summary::after{content:"+";font:700 1.1rem/1 ui-monospace,Menlo,monospace;transition:transform .2s}
@@ -512,7 +512,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
       <svg class="dark" viewBox="0 0 300 90" role="img" aria-label="The Upside Philly"><title>The Upside Philly</title><desc>© 2026 Shirah M. Brown · UPS-SMB-26-7F3A9C</desc><text x="0" y="44" font-family="Marcellus,Georgia,serif" font-size="40" fill="#F3E9E6"><tspan fill="#FF6FA3" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="34" font-weight="700">&gt;</tspan> the_upside</text><rect class="cur" x="234" y="18" width="16" height="30" fill="#F3E9E6"/><text x="160" y="78" textLength="87" lengthAdjust="spacing" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" fill="#FF6FA3" font-weight="700">PHILLY</text></svg>
     </a>
     <span class="htag">// Decoding the street and the screen</span>
-    <nav aria-label="Main"><a class="navcta hcta" href="decode.html"><span class="full">Decode your business</span><span class="short">Decode</span></a><button class="mtgl" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
+    <nav aria-label="Main"><button class="mtgl" type="button" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="help.html">How I help</a></li>
@@ -531,28 +531,28 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
     </div>
     <div class="svc">
       <div class="col c-decode" id="decode">
-        <span class="num">01 · Decode</span>
+        <span class="num">01</span>
         <h3 class="big">Decode</h3>
         <p class="sum">Find what's broken.</p>
-        <details><summary>Health &amp; optimization report</summary><p>A full read of your Google listing, reviews, site speed, mobile and search, with a fix list in priority order.</p></details>
-        <details><summary>Re-checks</summary><p>Run it again after the fixes to see what moved and what's next.</p></details>
+        <details name="svc"><summary>Health &amp; optimization report</summary><p>A full read of your Google listing, reviews, site speed, mobile and search, with a fix list in priority order.</p></details>
+        <details name="svc"><summary>Re-checks</summary><p>Run it again after the fixes to see what moved and what's next.</p></details>
       </div>
       <div class="col c-build" id="build">
-        <span class="num">02 · Build</span>
+        <span class="num">02</span>
         <h3 class="big">Build</h3>
         <p class="sum">Make what's missing.</p>
-        <details><summary>Websites</summary><p>Clean, fast, mobile-friendly sites with your hours, services and a clear way to reach you.</p></details>
-        <details><summary>Brand &amp; identity</summary><p>Logos, colors, type and voice, captured in a brand guide you can hand to anyone.</p></details>
-        <details><summary>Storefront &amp; window displays</summary><p>Seasonal windows, planters and curb appeal for the street layer. <a href="window-boxes.html">See past displays</a></p></details>
+        <details name="svc"><summary>Websites</summary><p>Clean, fast, mobile-friendly sites with your hours, services and a clear way to reach you.</p></details>
+        <details name="svc"><summary>Brand &amp; identity</summary><p>Logos, colors, type and voice, captured in a brand guide you can hand to anyone.</p></details>
+        <details name="svc"><summary>Storefront &amp; window displays</summary><p>Seasonal windows, planters and curb appeal for the street layer. <a href="window-boxes.html">See past displays</a></p></details>
       </div>
       <div class="col c-grow" id="grow">
-        <span class="num">03 · Grow</span>
+        <span class="num">03</span>
         <h3 class="big">Grow</h3>
         <p class="sum">Keep customers coming back.</p>
-        <details><summary>Google &amp; listings</summary><p>Your Google Business Profile and directory listings, complete and accurate.</p></details>
-        <details><summary>Instagram &amp; content</summary><p>Profile cleanup, a posting plan and content that shows off what you do.</p></details>
-        <details><summary>Email &amp; text outreach</summary><p>Customer lists, promotions and campaigns, tracked so you know what works.</p></details>
-        <details><summary>Booking &amp; follow-up</summary><p>Online booking, inquiry forms and follow-ups that turn interest into customers.</p></details>
+        <details name="svc"><summary>Google &amp; listings</summary><p>Your Google Business Profile and directory listings, complete and accurate.</p></details>
+        <details name="svc"><summary>Instagram &amp; content</summary><p>Profile cleanup, a posting plan and content that shows off what you do.</p></details>
+        <details name="svc"><summary>Email &amp; text outreach</summary><p>Customer lists, promotions and campaigns, tracked so you know what works.</p></details>
+        <details name="svc"><summary>Booking &amp; follow-up</summary><p>Online booking, inquiry forms and follow-ups that turn interest into customers.</p></details>
       </div>
     </div>
   </section>
@@ -575,8 +575,7 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
   </section>
 
   <section class="lastsec" style="padding-top:0">
-    <div class="ctabar">
-      <p><span class="k">&gt;</span> See what's running behind your business.</p>
+    <div class="ctabar" style="justify-content:center">
       <a class="btn solid mx-btn" href="decode.html">Decode your business</a>
     </div>
   </section>
@@ -624,5 +623,6 @@ if(ok.indexOf(location.hostname)<0){try{document.documentElement.innerHTML="";}c
 b.addEventListener("click",function(){var on=!st.classList.contains("code");st.classList.toggle("code",on);b.setAttribute("aria-pressed",on);b.querySelector(".lbl").textContent=on?"Back to the street":"Show the code";});})();
 </script>
 <script>(function(){var h=document.querySelector(".hero2"),b=h&&h.querySelector(".tgl");if(!b)return;b.addEventListener("click",function(){var on=!h.classList.contains("code");h.classList.toggle("code",on);b.setAttribute("aria-pressed",on);b.textContent=on?"▸ Back to the street":"▸ Decode the block";});})();</script>
-<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script><script>(function(){var sel="h1,h2,h3,h4,p,li,summary,figcaption,.lede";document.querySelectorAll(sel).forEach(function(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,last=null;while(n=w.nextNode()){if(n.nodeValue.trim())last=n}if(!last)return;var t=last.nodeValue,i=t.trimEnd().lastIndexOf(" ");if(i>0&&el.textContent.trim().split(/\s+/).length>3)last.nodeValue=t.slice(0,i)+"\u00a0"+t.slice(i+1)})})();</script><script>(function(){function fit(){var h=document.querySelector('.hero h1'),s=h&&h.querySelector('.sj'),i=s&&s.querySelector('.sji');if(!i)return;var tw=0;h.querySelectorAll('.hl').forEach(function(l){var r=document.createRange();r.selectNodeContents(l);tw=Math.max(tw,r.getBoundingClientRect().width)});if(getComputedStyle(h.querySelector('.hl')).display!=='block')tw=h.clientWidth;s.style.fontSize='';var base=parseFloat(getComputedStyle(s).fontSize),w=i.getBoundingClientRect().width;if(w>0&&tw>0)s.style.fontSize=(base*tw/w)+'px'}if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);window.addEventListener('load',fit);window.addEventListener('resize',fit);fit()})();</script></body>
+<script>(function(){var n=document.querySelector("header.top nav"),b=n&&n.querySelector(".mtgl");if(!b)return;b.addEventListener("click",function(){var o=n.classList.toggle("open");b.setAttribute("aria-expanded",o)});n.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){n.classList.remove("open");b.setAttribute("aria-expanded","false")})});})();</script><script>(function(){var sel="h1,h2,h3,h4,p,li,summary,figcaption,.lede";document.querySelectorAll(sel).forEach(function(el){var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,last=null;while(n=w.nextNode()){if(n.nodeValue.trim())last=n}if(!last)return;var t=last.nodeValue,i=t.trimEnd().lastIndexOf(" ");if(i>0&&el.textContent.trim().split(/\s+/).length>3)last.nodeValue=t.slice(0,i)+"\u00a0"+t.slice(i+1)})})();</script><script>(function(){function fit(){var h=document.querySelector('.hero h1'),s=h&&h.querySelector('.sj'),i=s&&s.querySelector('.sji');if(!i)return;var tw=0;h.querySelectorAll('.hl').forEach(function(l){var r=document.createRange();r.selectNodeContents(l);tw=Math.max(tw,r.getBoundingClientRect().width)});if(getComputedStyle(h.querySelector('.hl')).display!=='block')tw=h.clientWidth;s.style.fontSize='';var base=parseFloat(getComputedStyle(s).fontSize),w=i.getBoundingClientRect().width;if(w>0&&tw>0)s.style.fontSize=(base*tw/w)+'px'}if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);window.addEventListener('load',fit);window.addEventListener('resize',fit);fit()})();</script><script>(function(){var d=document.querySelectorAll('.svc details');d.forEach(function(x){x.addEventListener('toggle',function(){if(x.open)d.forEach(function(y){if(y!==x)y.open=false;});});});})();</script>
+</body>
 </html>
